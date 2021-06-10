@@ -1,0 +1,43 @@
+/*!* As hex codes *!*/
+/*.color-primary-0 { color: #9EF3F3 }*/
+/*.color-primary-1 { color: #FFFFFF }*/
+/*.color-primary-2 { color: #D2FCFC }*/
+/*.color-primary-3 { color: #72E3E3 }*/
+/*.color-primary-4 { color: #4BC7C7 }*/
+/*!* As RGBa codes *!*/
+/*.rgba-primary-0 { color: rgba(158,243,243,1) }*/
+/*.rgba-primary-1 { color: rgba(255,255,255,1) }*/
+/*.rgba-primary-2 { color: rgba(210,252,252,1) }*/
+/*.rgba-primary-3 { color: rgba(114,227,227,1) }*/
+/*.rgba-primary-4 { color: rgba( 75,199,199,1) }*/
+
+/*body{*/
+/*    background-color: #D2FCFC !important;*/
+/*}*/
+
+/*.table-info,*/
+/*.table-info > th,*/
+/*.table-info > td {*/
+/*    background-color: #9EF3F3 !important;*/
+/*}*/
+/*.table-info th,*/
+/*.table-info td,*/
+/*.table-info thead th,*/
+/*.table-info tbody + tbody {*/
+/*    border-color: #4BC7C7 !important;*/
+/*}*/
+/*.table-hover .table-info:hover {*/
+/*    background-color: #FFFFFF !important;*/
+/*}*/
+/*.table-hover .table-info:hover > td,*/
+/*.table-hover .table-info:hover > th {*/
+/*    background-color: #FFFFFF !important;*/
+/*}*/
+/*.descript{*/
+/*    height: 10vh;*/
+/*    font-style: italic;*/
+/*}*/
+/*.titulo{*/
+/*    font-size: medium;*/
+/*    font-weight: bold;*/
+/*}*/
