@@ -19,11 +19,11 @@ class CategoriaTableSeeder extends Seeder
         $cat->save();
 
         $cat = new Categoria();
-        $cat->nombre = "Tinto";
+        $cat->nombre = "Amontillado";
         $cat->save();
 
         $cat = new Categoria();
-        $cat->nombre = "Oloroso";
+        $cat->nombre = "Tinaja";
         $cat->save();
     }
 }

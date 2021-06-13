@@ -65,7 +65,7 @@
                                         <p><span class="titulo">Categoría</span> - {{$producto->categ->nombre}}</p>
                                         <p><span class="titulo">Precio</span> - {{$producto->precio}} €</p>
                                         <a href="{{url('producto/'.$producto->id.'/edit')}}"
-                                           class="btn btn-warning mr-2">Editar</a>
+                                           class="btn btn-success mr-2">Editar</a>
                                         <a class="btn btn-danger" href="#{{$contador++}}" data-toggle="modal"
                                            data-target="#borrarArticulo{{$contador}}">Borrar</a>
                                         <div class="modal " id="borrarArticulo{{$contador}}" role="dialog">

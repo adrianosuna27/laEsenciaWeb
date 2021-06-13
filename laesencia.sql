@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-06-2021 a las 17:48:24
+-- Tiempo de generación: 13-06-2021 a las 20:36:12
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -39,9 +39,9 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id`, `nombre`, `created_at`, `updated_at`) VALUES
-(1, 'Fino', '2021-06-10 13:47:51', '2021-06-10 13:47:51'),
-(2, 'Tinto', '2021-06-10 13:47:51', '2021-06-10 13:47:51'),
-(3, 'Oloroso', '2021-06-10 13:47:51', '2021-06-10 13:47:51');
+(1, 'Fino', '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(2, 'Amontillado', '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(3, 'Tinaja', '2021-06-13 16:35:34', '2021-06-13 16:35:34');
 
 -- --------------------------------------------------------
 
@@ -74,6 +74,13 @@ CREATE TABLE `cuentas` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `cuentas`
+--
+
+INSERT INTO `cuentas` (`id`, `user_id`, `iban`, `saldo`, `created_at`, `updated_at`) VALUES
+(1, 1, NULL, NULL, '2021-06-13 16:35:48', '2021-06-13 16:35:48');
 
 -- --------------------------------------------------------
 
@@ -263,6 +270,13 @@ CREATE TABLE `pedidos` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`id`, `id_user`, `precio_total`, `fecha_pedido`, `created_at`, `updated_at`) VALUES
+(1, 1, NULL, NULL, '2021-06-13 16:35:48', '2021-06-13 16:35:48');
+
 -- --------------------------------------------------------
 
 --
@@ -311,15 +325,14 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `user_id`, `nombre`, `descripcion`, `id_categoria`, `imagen`, `precio`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Peugeot 407', 'Coche del 2007. En buen estado.', 1, 'imagen-defecto.png', 4600.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52'),
-(2, 3, 'Samgsung 50 pulgadas', 'Televisor con un año de uso', 3, 'imagen-defecto.png', 220.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52'),
-(3, 3, 'Xiaomi M5', 'Movil nuevo a estrenar con su plastico y todo. Precio no negociable.', 1, 'imagen-defecto.png', 350.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52'),
-(4, 2, 'Ford Mondeo', 'Cambio por Seat Ibica', 1, 'imagen-defecto.png', 2400.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52'),
-(5, 2, 'Vespa', 'Vendo vespa para piezas', 2, 'imagen-defecto.png', 500.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52'),
-(6, 2, 'Mesita de noche', 'Mesita de noche casi nueva.', 3, 'imagen-defecto.png', 60.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52'),
-(7, 3, 'Piso sin muebles', 'Vendo piso cerca del centro.', 3, 'imagen-defecto.png', 120000.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52'),
-(8, 3, 'Huawei p30 lite', 'Movil con un año de uso.', 2, 'imagen-defecto.png', 150.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52'),
-(9, 3, 'LG 60 pulgadas', 'Televiisor con pantalla rota', 2, 'imagen-defecto.png', 50.00, '2021-06-10 13:47:52', '2021-06-10 13:47:52');
+(1, 1, 'Fino San Pablo', 'Un color oro, paja, brillante, amargo en la boca y el magnífico y punzante aroma en la nariz.', 1, 'Fino1.png', 17.50, '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(2, 3, 'FINO LAGAR DE LOS FRAILES 3', 'Entre sus notas de cata destaca el recuerdo a miga de pan, levadura y toques cítricos…una explosión de  aromas y sabores que inundan a cada sorbo.', 1, 'FinoRama.jpeg', 29.50, '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(3, 3, 'AMONTILLADO LAGAR DE LOS FRAILES', 'Un vino limpio y brillante. En nariz es intenso,  destacando los aromas ahumado, bollería y avellanado.', 2, 'Amontillado.jpg', 27.50, '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(4, 2, 'AMONTILLADO', 'Vino generoso viejo. Con mucho cuerpo y sabor aterciopelado en boca es sabroso, con una agradable dulzura y suavidad y moderadamente seco.', 2, 'AmontilladoCB.jpg', 12.00, '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(5, 2, 'YEMA DE TINAJA', 'Es un vino muy aromático de color amarillo pálido, que puede presentarse ligeramente turbio debido a su estado natural. Es la nube característica de los denominados “vinos en rama”.', 3, 'tinajaCB.jpg', 4.50, '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(6, 2, 'FINO FLOR', 'Un vino de gran personalidad, envejecido en barricas centenarias de roble americano y seleccionado de nuestras mejores soleras.', 1, 'finoCB.jpg', 7.00, '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(7, 3, 'VINO DE TINAJA LAGAR DE LOS FRAILES', 'Como todos nuestros vinos, es  100 % en rama, sin ningún tratamiento ni filtrado, ligero y amable al paladar.', 3, 'VinoTinaja.jpg', 24.50, '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(8, 2, 'Amontillado San Pablo', 'El amontillado San Pablo es un vino que tiene más de 40 años de crianza en roble americano.', 2, 'Amontillado1.png', 21.00, '2021-06-13 16:35:34', '2021-06-13 16:35:34');
 
 -- --------------------------------------------------------
 
@@ -340,8 +353,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'Administrator', '2021-06-10 13:47:51', '2021-06-10 13:47:51'),
-(2, 'user', 'Normal User', '2021-06-10 13:47:51', '2021-06-10 13:47:51');
+(1, 'admin', 'Administrator', '2021-06-13 16:35:34', '2021-06-13 16:35:34'),
+(2, 'user', 'Normal User', '2021-06-13 16:35:34', '2021-06-13 16:35:34');
 
 -- --------------------------------------------------------
 
@@ -409,10 +422,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `nombre`, `apellidos`, `email`, `avatar`, `password`, `cp`, `telefono`, `direccion`, `bodega`, `nom_bodega`, `email_verified_at`, `remember_token`, `settings`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, NULL, 'Adrian', 'Osuna', 'adrian@adrian.es', 'users/default.png', '$2y$10$SmrfPmukfUMQXFI98GxOf.anzO8v3yjHaEEUxdAflifcxX/xejIVS', '12345', '123456789', 'C/Calle', 1, 'Bodega San Pablo', '2021-03-03 08:19:31', NULL, NULL, '2021-06-10 13:47:51', '2021-06-10 13:47:51', NULL),
-(2, NULL, 'Fran', 'Roldan', 'fran@fran.es', 'users/default.png', '$2y$10$O2Kay.yr29B11xtO10cme.oXs8Ckk8WXE6vxWBHsfR8i1vmQOUlhi', '12345', '123456789', 'C/Calle', 1, 'Lagar Casa Blanca', '2021-03-03 08:19:31', NULL, NULL, '2021-06-10 13:47:51', '2021-06-10 13:47:51', NULL),
-(3, NULL, 'Ana', 'Doblado', 'ana@ana.es', 'users/default.png', '$2y$10$COpJnsdanyL8H7xW1pEWvets5OhMkKFps6b2MP/Dzi/rNMC3EBym6', '12345', '123456789', 'C/Calle', 1, 'Lagar los Frailes', NULL, NULL, NULL, '2021-06-10 13:47:51', '2021-06-10 13:47:51', NULL),
-(4, NULL, 'Arturo', 'Perez', 'arturo@arturo.es', 'users/default.png', '$2y$10$D8wo3wFT4wenA3/PzACpp.qAcOJXfJCdutHNLJYvoMTfEj9bkbtgO', '12345', '123456789', 'C/Calle', NULL, NULL, NULL, NULL, NULL, '2021-06-10 13:47:52', '2021-06-10 13:47:52', NULL);
+(1, NULL, 'Adrian', 'Osuna', 'adrian@adrian.es', 'users/default.png', '$2y$10$tQbYhZZtt2DlRYWQN7xZjOcty/Db8UwWWWpDgbi7DQH7gCN/43C1C', '12345', '123456789', 'C/Calle', 1, 'Bodega San Pablo', '2021-03-03 08:19:31', NULL, NULL, '2021-06-13 16:35:34', '2021-06-13 16:35:34', NULL),
+(2, NULL, 'Fran', 'Roldan', 'fran@fran.es', 'users/default.png', '$2y$10$lQ6rRDn.0sbeLd8dVPovcOctJYszK26fbqXDCetjsZD1cYMirR.2K', '12345', '123456789', 'C/Calle', 1, 'Lagar Casa Blanca', '2021-03-03 08:19:31', NULL, NULL, '2021-06-13 16:35:34', '2021-06-13 16:35:34', NULL),
+(3, NULL, 'Ana', 'Doblado', 'ana@ana.es', 'users/default.png', '$2y$10$UKf17W3p/djGJXkngz2jYOW05O6EpcA0IWwr5S1oOhsO4cCnXX6HW', '12345', '123456789', 'C/Calle', 1, 'Lagar los Frailes', NULL, NULL, NULL, '2021-06-13 16:35:34', '2021-06-13 16:35:34', NULL),
+(4, NULL, 'Arturo', 'Perez', 'arturo@arturo.es', 'users/default.png', '$2y$10$xIPZSW9ljhF06U9hRqFdH.eFDVMIQ.ytOUW8VhJa3XrqYQ9IL5w/S', '12345', '123456789', 'C/Calle', NULL, NULL, NULL, NULL, NULL, '2021-06-13 16:35:34', '2021-06-13 16:35:34', NULL);
 
 -- --------------------------------------------------------
 
@@ -603,7 +616,7 @@ ALTER TABLE `cestas`
 -- AUTO_INCREMENT de la tabla `cuentas`
 --
 ALTER TABLE `cuentas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `data_rows`
@@ -651,7 +664,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
@@ -663,7 +676,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`

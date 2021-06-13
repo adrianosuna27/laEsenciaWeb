@@ -1,43 +1,63 @@
-/*!* As hex codes *!*/
-/*.color-primary-0 { color: #9EF3F3 }*/
-/*.color-primary-1 { color: #FFFFFF }*/
-/*.color-primary-2 { color: #D2FCFC }*/
-/*.color-primary-3 { color: #72E3E3 }*/
-/*.color-primary-4 { color: #4BC7C7 }*/
-/*!* As RGBa codes *!*/
-/*.rgba-primary-0 { color: rgba(158,243,243,1) }*/
-/*.rgba-primary-1 { color: rgba(255,255,255,1) }*/
-/*.rgba-primary-2 { color: rgba(210,252,252,1) }*/
-/*.rgba-primary-3 { color: rgba(114,227,227,1) }*/
-/*.rgba-primary-4 { color: rgba( 75,199,199,1) }*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
-/*body{*/
-/*    background-color: #D2FCFC !important;*/
-/*}*/
+.color1 {
+    color: #c48c70;
+}
 
-/*.table-info,*/
-/*.table-info > th,*/
-/*.table-info > td {*/
-/*    background-color: #9EF3F3 !important;*/
-/*}*/
-/*.table-info th,*/
-/*.table-info td,*/
-/*.table-info thead th,*/
-/*.table-info tbody + tbody {*/
-/*    border-color: #4BC7C7 !important;*/
-/*}*/
-/*.table-hover .table-info:hover {*/
-/*    background-color: #FFFFFF !important;*/
-/*}*/
-/*.table-hover .table-info:hover > td,*/
-/*.table-hover .table-info:hover > th {*/
-/*    background-color: #FFFFFF !important;*/
-/*}*/
-/*.descript{*/
-/*    height: 10vh;*/
-/*    font-style: italic;*/
-/*}*/
-/*.titulo{*/
-/*    font-size: medium;*/
-/*    font-weight: bold;*/
-/*}*/
+.color2 {
+    color: #d1b186;
+}
+
+.color3 {
+    color: #e4d1aa;
+}
+
+.color4 {
+    color: #eaead6;
+}
+
+.color5 {
+    color: #f3f3f3;
+}
+
+body {
+    background-color: #ebebe4 !important;
+    font-family: 'Nanum Gothic', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 44px;
+    margin: 0 0 12px;
+    text-align: center
+}
+
+.navbar, .dropdown-menu {
+    background-color: #c1b09d !important;
+}
+
+.card-body {
+    background-color: #f7fafb !important;
+}
+
+.card-header {
+    background-color: #d1b186 !important;
+}
+
+.btn-primary, .btn-success {
+    background-color: #9e724e !important;
+    border: none;
+    box-shadow: none;
+}
+
+.descript {
+    height: 10vh;
+    font-style: italic;
+}
+
+.titulo {
+    font-size: medium;
+    font-weight: bold;
+}

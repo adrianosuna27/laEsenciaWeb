@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatalogoController;
 use App\Http\Controllers\CestaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PedidoController;
@@ -26,6 +27,12 @@ Route::get('/', function () {
     return view('home')->with('productos', $pro)->with("url", $url);
 });
 
+Route::get('catalogo', function () {
+    $pro = Producto::all();
+    $url = 'storage/img/';
+    return view('catalogo')->with('productos', $pro)->with("url", $url);
+});
+
 Auth::routes(['verify' => true]);
 
 Route::middleware('auth', 'verified')->group(function () {
@@ -35,7 +42,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::resource('/user', UserController::class);
     Route::resource('/pedidos', PedidoController::class);
     Route::resource('/producto', ProductoController::class);
-
+    Route::resource('/catalogo', CatalogoController::class);
 
 });
 
