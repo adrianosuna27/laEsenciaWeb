@@ -10,7 +10,8 @@
 
                     <div class="form-group">
                         <label for="nombre">Nombre del Usuario</label>
-                        <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" placeholder="Nombre del Usuario"
+                        <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre"
+                               placeholder="Nombre del Usuario"
                                value="{{$user->nombre}}">
                         @error('nombre')
                         <span class="invalid-feedback" role="alert">
@@ -20,7 +21,8 @@
                     </div>
                     <div class="form-group">
                         <label for="apellidos">Apellidos</label>
-                        <input type="text" class="form-control @error('apellidos') is-invalid @enderror" name="apellidos" placeholder="Apellidos"
+                        <input type="text" class="form-control @error('apellidos') is-invalid @enderror"
+                               name="apellidos" placeholder="Apellidos"
                                value="{{$user->apellidos}}">
                         @error('apellidos')
                         <span class="invalid-feedback" role="alert">
@@ -36,7 +38,8 @@
                     </div>
                     <div class="form-group">
                         <label for="direccion">Dirección</label>
-                        <input type="text" class="form-control @error('direccion') is-invalid @enderror" name="direccion" placeholder="Direccion"
+                        <input type="text" class="form-control @error('direccion') is-invalid @enderror"
+                               name="direccion" placeholder="Direccion"
                                value="{{$user->direccion}}">
                         @error('direccion')
                         <span class="invalid-feedback" role="alert">
@@ -46,7 +49,8 @@
                     </div>
                     <div class="form-group">
                         <label for="cp">Código Postal</label>
-                        <input type="text" class="form-control @error('cp') is-invalid @enderror" name="cp" placeholder="Codigo Postal"
+                        <input type="text" class="form-control @error('cp') is-invalid @enderror" name="cp"
+                               placeholder="Codigo Postal"
                                value="{{$user->cp}}">
                         @error('cp')
                         <span class="invalid-feedback" role="alert">
@@ -56,13 +60,23 @@
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono</label>
-                        <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" placeholder="Nº Telefono"
+                        <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono"
+                               placeholder="Nº Telefono"
                                value="{{$user->telefono}}">
                         @error('telefono')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                         @enderror
+                    </div>
+                    <h4>Método de Pago</h4>
+                    <div class="form-group">
+
+                        <label for="tarjeta">Tarjeta de Crédito</label>
+                        @foreach($cuenta as $c)
+                            <input type="text" class="form-control" name="tarjeta" placeholder="Nº Tarjeta"
+                                   value="{{$c->iban}}">
+                        @endforeach
                     </div>
                     <a href="{{url('user')}}" class="btn btn-secondary">Volver</a>
                     <button type="submit" class="btn btn-primary">Guardar</button>

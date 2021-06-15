@@ -39,10 +39,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="{{ url('/catalogo') }}">{{ __('Tienda Online') }}</a>
-                    </li>
+                    @if(Auth::user() == false)
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="{{ url('/catalogoOffline') }}">{{ __('Tienda Online') }}</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="{{ url('/catalogo') }}">{{ __('Tienda Online') }}</a>
+                        </li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -59,11 +66,11 @@
                         @if(Auth::user()->bodega == false)
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="{{ url('/bodega') }}">{{ __('¿Quieres vender tus vinos?') }}</a>
+                                   href="{{ url('/producto') }}">{{ __('¿Quieres vender tus vinos?') }}</a>
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/producto') }}">{{ __('Vender Vinos') }}</a>
+                                <a class="nav-link" href="{{ url('/producto') }}">{{ __('Mi Bodega') }}</a>
                             </li>
                         @endif
 
@@ -95,7 +102,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/cesta') }}"><i class="fas fa-shopping-cart"></i>
-                                Cesta</a>
+                                Cesta ({{\App\Http\Controllers\CestaController::count()}})</a>
                         </li>
                     @endguest
                 </ul>

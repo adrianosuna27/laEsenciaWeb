@@ -44,7 +44,7 @@ class UserController extends Controller
         $newCuenta = Cuenta::all()->where("user_id", Auth::id());
         foreach ($newCuenta as $c) {
             $c->iban = $request->cuenta;
-            $c->saldo = $request->saldo;
+            $c->saldo = 9999;
             $c->save();
         }
 
@@ -73,7 +73,9 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        return view('user.edit')->with('user', $user);
+        $cuenta = Cuenta::all()->where("user_id", Auth::id());
+
+        return view('user.edit')->with('user', $user)->with('cuenta', $cuenta);
     }
 
     /**
@@ -106,6 +108,12 @@ class UserController extends Controller
         $user->telefono = $request->telefono;
 
         $user->save();
+
+        $cuenta = Cuenta::all()->where("user_id", Auth::id());
+        foreach ($cuenta as $c) {
+            $c->iban = $request->tarjeta;
+            $c->save();
+        }
         return redirect()->route('user.index');
     }
 

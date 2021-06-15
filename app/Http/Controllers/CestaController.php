@@ -83,7 +83,6 @@ class CestaController extends Controller
     {
         if ($id == "comprar") {
 
-            $cuenta = Cuenta::all()->where("user_id", Auth::id());
             $cesta = Cesta::all()->where('id_user', Auth::id());
             $pedido = Pedido::all()->where("id_user", Auth::id());
             $idPedido = 0;
@@ -117,11 +116,6 @@ class CestaController extends Controller
                 }
             }
 
-            foreach ($cuenta as $cu){
-                $cu->saldo -= $precioPedido;
-                $cu->save();
-            }
-
             // Creación de un nuevo pedido vacio
             $newPed = new Pedido();
             $newPed->id_user = Auth::id();
@@ -132,7 +126,7 @@ class CestaController extends Controller
 
         }
 
-        return redirect()->route('cesta.index');
+        return redirect()->route('pedidos.index');
 
     }
 
@@ -152,5 +146,15 @@ class CestaController extends Controller
         }
 
         return redirect()->route('cesta.index');
+    }
+    public static function count(){
+        $cesta = Cesta::all()->where('id_user', Auth::id());
+        $cantidad = 0;
+
+        foreach ($cesta as $c){
+            $cantidad += $c->cantidad;
+        }
+
+        return $cantidad;
     }
 }

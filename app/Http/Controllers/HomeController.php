@@ -42,10 +42,10 @@ class HomeController extends Controller
             $newCue->user_id = Auth::id();
             $newCue->save();
         }
-
+        $hola = 4;
         $pro = Producto::all();
         $url = 'storage/img/';
-        return view('/home')->with('productos', $pro)->with("url", $url);
+        return view('/home')->with('productos', $pro)->with("url", $url)->with("hola", $hola);
     }
 
     /**

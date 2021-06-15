@@ -10,7 +10,6 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Articulo</th>
                     <th scope="col">Botella de Vino</th>
                     <th scope="col">Cantidad</th>
@@ -24,7 +23,6 @@
                     <span id="{{$importe += $producto->precio_total}}" hidden></span>
 
                     <tr>
-                        <td scope="row">{{$producto->id}}</td>
                         <td scope="row"><img class="rounded" height="75px" width="75px"
                                              src="{{asset($url.$producto->vino->imagen)}}"></td>
                         <td scope="row">{{$producto->vino->nombre}}</td>
@@ -99,17 +97,12 @@
                                     <h5><strong>Método de pago:</strong></h5>
                                     @foreach($cuentas as $cuenta)
                                         @if($cuenta->iban == null)
-                                            <p class=" col-8 alert alert-danger text-center" role="alert">
-                                                No has añadido métodoo de pago
+                                            <p>
+                                                <span class="alert alert-danger text-center" role="alert">No has añadido métodoo de pago</span>
+                                                <a class="btn btn-outline-dark" href="{{url("user")}}">Añadir</a>
                                             </p>
                                         @else
-                                            <p><strong>Cuenta Bancaria: </strong>{{$cuenta->iban}}</p>
-                                            <p><strong>Saldo: </strong>{{$cuenta->saldo}} €</p>
-                                            @if($cuenta->saldo < $importe)
-                                                <p class=" col-8 alert alert-danger text-center" role="alert">
-                                                    No tienes saldo suficiente
-                                                </p>
-                                            @endif
+                                            <p><strong>Tarjeta de Crédito: </strong>{{$cuenta->iban}}</p>
                                         @endif
                                     @endforeach
                                     <h5 class="float-right"><strong>Importe total: {{$importe}}€</strong></h5>
@@ -125,7 +118,7 @@
                                         @method('put')
                                         <button type="submit" class="btn btn-success" name="Comprar"
                                                 @foreach($cuentas as $cuenta)
-                                                @if($cuenta->iban == null || $cuenta->saldo < $importe) disabled @endif
+                                                @if($cuenta->iban == null) disabled @endif
                                                 @endforeach >
                                             Comprar
                                         </button>

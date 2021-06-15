@@ -47,7 +47,7 @@
                     <div class="form-group">
                         <label for="imagen">Imagen del Articulo</label>
                         <input type="file" class="form-control @error('imagen') is-invalid @enderror" name="imagen"
-                               placeholder="Imagen del coche">
+                               placeholder="Imagen del Producto">
                         @error('imagen')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -57,7 +57,7 @@
                     <div class="form-group">
                         <label for="precio">Precio del Articulo</label>
                         <input type="text" class="form-control @error('precio') is-invalid @enderror" name="precio"
-                               placeholder="Precio del coche">
+                               placeholder="Precio del Producto">
                         @error('precio')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

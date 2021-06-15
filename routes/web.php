@@ -27,7 +27,7 @@ Route::get('/', function () {
     return view('home')->with('productos', $pro)->with("url", $url);
 });
 
-Route::get('catalogo', function () {
+Route::get('catalogoOffline', function () {
     $pro = Producto::all();
     $url = 'storage/img/';
     return view('catalogo')->with('productos', $pro)->with("url", $url);

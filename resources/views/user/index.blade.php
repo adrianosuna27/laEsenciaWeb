@@ -61,14 +61,9 @@
                                                 <form action="{{route('user.store')}}" method="post">
                                                     @csrf
                                                     <div class="form-group">
-                                                        <label for="cuenta">IBAN de la cuenta</label>
+                                                        <label for="cuenta">Tarjeta de Crédito</label>
                                                         <input type="text" class="form-control" name="cuenta"
-                                                               placeholder="IBAN de la cuenta" maxlength="9">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="saldo">Saldo de la cuenta</label>
-                                                        <input type="text" class="form-control" name="saldo"
-                                                               placeholder="Saldo de la cuenta" maxlength="4">
+                                                               placeholder="Tarjeta de Crédito" maxlength="9">
                                                     </div>
                                                     <button type="submit" class="btn btn-success float-right"
                                                             name="añadir">
@@ -81,16 +76,10 @@
                                 </div>
                             @else
                                 <div class="form-group">
-                                    <label for="cuenta">IBAN de la cuenta</label>
+                                    <label for="cuenta">Tarjeta de Crédito</label>
                                     <input type="text" class="form-control" name="cuenta"
-                                           placeholder="IBAN de la cuenta"
+                                           placeholder="Tarjeta de Crédito"
                                            value="{{$cuenta->iban}}" disabled>
-                                </div>
-                                <div class="form-group">
-                                    <label for="saldo">Saldo de la cuenta</label>
-                                    <input type="text" class="form-control" name="saldo"
-                                           placeholder="Saldo de la cuenta"
-                                           value="{{$cuenta->saldo}}" disabled>
                                 </div>
                             @endif
                         @endforeach
@@ -108,7 +97,7 @@
 
                     @endif
 
-                </div>
+                </div><br>
                 <a href="{{url('home')}}" class="btn btn-secondary">Volver al Inicio</a>
 
             </div>
