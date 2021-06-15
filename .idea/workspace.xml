@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b675d51-7e5a-494c-a5ee-7946d1ab5e68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CestaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CestaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cesta/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cesta/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/producto/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/producto/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/producto/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/producto/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../milArticulos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../milArticulos/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../milArticulos/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/../milArticulos/app/Models/Role.php" afterDir="false" />
     </list>
@@ -88,11 +77,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/producto/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-906">
               <caret line="24" column="38" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env.example">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -168,7 +166,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/PedidoController.php" />
         <option value="$PROJECT_DIR$/resources/views/pedidos/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pdf/index.blade.php" />
-        <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/storage/app/.gitignore" />
         <option value="$PROJECT_DIR$/storage/app/public/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CatalogoController.php" />
@@ -188,6 +185,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/producto/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/producto/edit.blade.php" />
+        <option value="$PROJECT_DIR$/.env.example" />
       </list>
     </option>
   </component>
@@ -479,12 +477,12 @@
       <workItem from="1623592289588" duration="4284000" />
       <workItem from="1623597078998" duration="3835000" />
       <workItem from="1623606279417" duration="2933000" />
-      <workItem from="1623741028491" duration="7071000" />
+      <workItem from="1623741028491" duration="7091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107747000" />
+    <option name="totallyTimeSpent" value="107767000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,13 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1717">
           <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
@@ -872,6 +863,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-906">
           <caret line="24" column="38" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
