@@ -26,7 +26,7 @@
                             {{--                            @endforeach--}}
 
                         </div>
-                        @if(Auth::user() != null)
+                        @if(Auth::user() != null && Auth::user()->bodega == null)
                             <div class="card-footer">
                                 <form action="{{url('catalogo/'.$producto->id)}}" method="post"
                                       enctype="multipart/form-data">
