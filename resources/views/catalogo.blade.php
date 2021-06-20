@@ -12,7 +12,7 @@
                         <div class="card-header titulo">{{$producto->nombre}}</div>
 
                         <div class="card-body text-center">
-                            <img class="rounded" height="275px" width="275px" src="{{asset($url.$producto->imagen)}}">
+                            <img class="rounded" height="275px" width="275px" src="{{asset($url.$producto->imagen)}}" alt="vinos">
                             <p class="text-center titulo">Descripción</p>
                             <p class="descript">{{$producto->descripcion}}</p>
                             <p><span class="titulo">Categoría</span> - {{$producto->categ->nombre}}</p>

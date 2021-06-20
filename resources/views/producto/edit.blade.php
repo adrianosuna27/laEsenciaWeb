@@ -49,7 +49,7 @@
                         @enderror
                     </div>
                     <div class="d-flex justify-content-center">
-                        <img class="rounded float-left" width="150px" src="{{asset($url.$producto->imagen)}}">
+                        <img class="rounded float-left" width="150px" src="{{asset($url.$producto->imagen)}}" alt="vinos">
                     </div>
                     <div class="form-group">
                         <label for="imagen">Imagen del Articulo</label>

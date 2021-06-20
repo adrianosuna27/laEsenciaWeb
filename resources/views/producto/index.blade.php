@@ -58,7 +58,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <img class="rounded" height="275px" width="275px"
-                                             src="{{asset($url.$producto->imagen)}}">
+                                             src="{{asset($url.$producto->imagen)}}" alt="vinos">
 
                                         <p class="titulo">Descripción</p>
                                         <p class="descript">{{$producto->descripcion}}</p>

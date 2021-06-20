@@ -44,7 +44,7 @@
                     <h3 class="text-center">Sobre Nosotros</h3>
                     <div class="row">
                         <div class="col-5 justify-content-center">
-                            <img width="65%" src="{{asset('storage/img/Mapa.jpg')}}">
+                            <img width="65%" src="{{asset('storage/img/Mapa.jpg')}}" alt="vinos">
                         </div>
                         <div class="col-7">
                             <br>

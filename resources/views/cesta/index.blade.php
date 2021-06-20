@@ -24,7 +24,7 @@
 
                     <tr>
                         <td scope="row"><img class="rounded" height="75px" width="75px"
-                                             src="{{asset($url.$producto->vino->imagen)}}"></td>
+                                             src="{{asset($url.$producto->vino->imagen)}}" alt="vinos"></td>
                         <td scope="row">{{$producto->vino->nombre}}</td>
                         <td scope="row">{{$producto->cantidad}}</td>
                         <td scope="row">{{$producto->precio_unidad}} €</td>

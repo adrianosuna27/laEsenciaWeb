@@ -37,7 +37,7 @@
                                                 @if($l->id_pedido == $pedido->id)
                                                     <tr>
                                                         <td scope="row"><img class="rounded" height="75px" width="75px"
-                                                                             src="{{asset($url.$l->vino->imagen)}}">
+                                                                             src="{{asset($url.$l->vino->imagen)}}" alt="vinos">
                                                         </td>
                                                         <td scope="row">{{$l->vino->nombre}}</td>
                                                         <td scope="row">{{$l->cantidad}}</td>
